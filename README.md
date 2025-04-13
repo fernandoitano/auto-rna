@@ -109,12 +109,13 @@ Contribuições para melhorar o código são bem-vindas. Algumas áreas potencia
 ## Citação
 Se você usar este código em sua pesquisa, por favor cite:
 
-@phdthesis{itano2023autorna,\n
-  title={Auto RNA: Desenvolvimento automático de redes neurais utilizando algoritmos genéticos},\n
-  author={Itano, Fernando},\n
-  school={Universidade de São Paulo},\n
-  year={2025}\n
+```@phdthesis{itano2023autorna,
+  title={Auto RNA: Desenvolvimento automático de redes neurais utilizando algoritmos genéticos},
+  author={Itano, Fernando},
+  school={Universidade de São Paulo},
+  year={2025}
 }
+```
 
 ## Licença
 Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para detalhes.
