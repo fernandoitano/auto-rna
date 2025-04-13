@@ -32,11 +32,6 @@ venv.bak/
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Datasets grandes ou sensíveis
-data/*.csv
-data/*.npy
-data/*.h5
-
 # Modelos treinados (se forem muito grandes)
 models/*.h5
 models/*.pkl
