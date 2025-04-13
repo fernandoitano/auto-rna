@@ -8,6 +8,7 @@ A primeira versão deste código foi desenvolvida em conjunto com Eder Fernando 
 Este projeto implementa um framework para otimizar automaticamente arquiteturas de redes neurais (CNN-LSTM) usando algoritmos genéticos. O algoritmo genético evolui populações de arquiteturas de rede para encontrar configurações otimizadas.
 
 ## Estrutura do Projeto
+
 /
 ├── data/                      # Diretório para arquivos de dados
 │   ├── Lynx.csv               # Série temporal de população de linces
@@ -16,7 +17,7 @@ Este projeto implementa um framework para otimizar automaticamente arquiteturas 
 │   └── SCI000001.csv          # Dados do índice SCI
 ├── ensaios/                   # Resultados dos experimentos
 ├── cnn_lstm_ga_libs.py        # Biblioteca de funções do algoritmo genético
-├── cnn_lstm_ga.py             # Script principal de execução
+├── main.py                    # Script principal de execução
 └── requirements.txt           # Dependências do projeto
 
 ## Requisitos
