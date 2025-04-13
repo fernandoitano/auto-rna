@@ -10,15 +10,25 @@ Este projeto implementa um framework para otimizar automaticamente arquiteturas 
 ## Estrutura do Projeto
 
 /
+
 ├── data/                      # Diretório para arquivos de dados
+
 │   ├── Lynx.csv               # Série temporal de população de linces
+
 │   ├── USmonthlysales.csv     # Dados de vendas mensais dos EUA
+
 │   ├── monthly-sunspots.csv   # Dados de manchas solares
+
 │   └── SCI000001.csv          # Dados do índice SCI
+
 ├── ensaios/                   # Resultados dos experimentos
+
 ├── cnn_lstm_ga_libs.py        # Biblioteca de funções do algoritmo genético
+
 ├── main.py                    # Script principal de execução
+
 └── requirements.txt           # Dependências do projeto
+
 
 ## Requisitos
 tensorflow>=2.8.0
