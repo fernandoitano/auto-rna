@@ -8,75 +8,72 @@ A primeira versão deste código foi desenvolvida em conjunto com Eder Fernando 
 Este projeto implementa um framework para otimizar automaticamente arquiteturas de redes neurais (CNN-LSTM) usando algoritmos genéticos. O algoritmo genético evolui populações de arquiteturas de rede para encontrar configurações otimizadas.
 
 ## Estrutura do Projeto
-
+```
 /
-
 ├── data/                      # Diretório para arquivos de dados
-
 │   ├── Lynx.csv               # Série temporal de população de linces
-
 │   ├── USmonthlysales.csv     # Dados de vendas mensais dos EUA
-
 │   ├── monthly-sunspots.csv   # Dados de manchas solares
-
 │   └── SCI000001.csv          # Dados do índice SCI
-
 ├── ensaios/                   # Resultados dos experimentos
-
 ├── cnn_lstm_ga_libs.py        # Biblioteca de funções do algoritmo genético
-
 ├── main.py                    # Script principal de execução
-
 └── requirements.txt           # Dependências do projeto
-
+```
 
 ## Requisitos
+```
 tensorflow>=2.8.0
 keras>=2.8.0
 numpy>=1.22.2
 pandas>=1.4.1
 matplotlib>=3.5.1
 scikit-learn>=1.0.2
+```
 
 Para instalar as dependências:
+```
 pip install -r requirements.txt
+```
 
 ## Como Usar
 Execução Básica
 Para executar o algoritmo com as configurações padrão:
+```
 python cnn_lstm_ga.py
+```
 
 ## Personalização do Dataset
 O código está configurado para trabalhar com vários conjuntos de dados de séries temporais. Para mudar o conjunto de dados, modifique a seção de carregamento de dados no script principal:
 
 ### Exemplo para usar o dataset Lynx
+```
 dataset = 'Lynx.csv'
 file = f'data/{dataset}'
 data = genfromtxt(file, delimiter=',')
 data = data[1:len(data)-1]
+```
 
 ## Configuração dos Parâmetros do Algoritmo Genético
 Os principais parâmetros que podem ser ajustados incluem:
-### Tamanho da população
-num_pop = 100
 
-### Número de gerações
-generations = 10
-
-### Probabilidade de cruzamento
-p_crossover = 0.75
-
-### Probabilidade de mutação
-p_mutation = 0.05
+```
+num_pop = 100       # Tamanho da população
+generations = 10    # Número de gerações
+p_crossover = 0.75  # Probabilidade de cruzamento
+p_mutation = 0.05   # Probabilidade de mutação
+```
 
 ## Personalização da Arquitetura Neural
 O algoritmo genético otimiza diversos parâmetros da arquitetura CNN-LSTM, definidos no conjunto de cromossomos:
+```
 chromosome_set = ['f1','f3','f4',    # Parâmetros das camadas CNN
                   'k',                # Kernel size
                   'a1','a4',          # Parâmetros de ativação
                   'd1','d3','d4',     # Parâmetros de dropout
                   'op','ep','n',      # Otimizador, épocas, neurônios
                   'rmse', 'loss', 'type']
+```
 
 ## Interpretação dos Resultados
 Após a execução, o algoritmo produz:
@@ -98,18 +95,11 @@ O módulo cnn_lstm_ga_libs.py contém as principais funções para a implementa�
 - population_mutation(): Aplica mutações aos cromossomos
 - find_cnn(): Verifica se um cromossomo já foi avaliado anteriormente
 
-## Contribuições e Melhorias
-Contribuições para melhorar o código são bem-vindas. Algumas áreas potenciais para melhorias incluem:
-
-- Implementação de paralelização para acelerar o treinamento
-- Adição de novos operadores genéticos
-- Suporte para outros tipos de arquiteturas de redes neurais
-- Melhoria na visualização dos resultados
-
 ## Citação
 Se você usar este código em sua pesquisa, por favor cite:
 
-```@phdthesis{itano2023autorna,
+```
+@phdthesis{itano2023autorna,
   title={Auto RNA: Desenvolvimento automático de redes neurais utilizando algoritmos genéticos},
   author={Itano, Fernando},
   school={Universidade de São Paulo},
